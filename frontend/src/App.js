@@ -7,6 +7,7 @@ import LiquidityChart from './components/LiquidityChart';
 import RewardChart from './components/RewardChart';
 import EarnChart from './components/EarnChart';
 import AddDataForm from './components/AddDataForm';
+import { apiUrl } from './apiUrl';
 
 const { Title } = Typography;
 const { Header, Content } = Layout;
@@ -16,7 +17,7 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/stablecoin')
+    axios.get(`${apiUrl}stablecoin`)
       .then(response => {
         console.log(response.data);
         setData(response.data);

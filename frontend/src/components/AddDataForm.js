@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Input, Button, DatePicker, message, Row, Col } from 'antd';
 import axios from 'axios';
 import moment from 'moment';
+import { apiUrl } from '../apiUrl';
 
 const AddDataForm = () => {
   const [form] = Form.useForm();
@@ -30,7 +31,7 @@ const AddDataForm = () => {
         }
       };
 
-      await axios.put('http://localhost:3001/stablecoin', formattedValues);
+      await axios.put(`${apiUrl}stablecoin`, formattedValues);
       message.success('Data added successfully!');
       form.resetFields();
     } catch (error) {
