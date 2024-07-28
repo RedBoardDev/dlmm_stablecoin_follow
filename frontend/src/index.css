@@ -1,3 +1,6 @@
+/* index.css */
+
+/* Styles de base pour le corps */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,26 +8,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85); /* Texte noir pour un thème clair */
+  background-color: #f5f5f5; /* Couleur de fond générale claire */
 }
 
+/* Styles pour les éléments de code */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-.ant-layout {
-  background: #0f0f0f;
-}
-
+/* Styles pour la mise en page Ant Design */
 .ant-layout-header {
-  background: #0f0f0f;
+  background: #ffffff; /* Fond clair pour le Header */
+  padding: 0 20px; /* Espacement intérieur */
+  display: flex; /* Utiliser flexbox pour centrer le contenu */
+  align-items: center; /* Aligner le contenu verticalement */
+  border-bottom: 1px solid #e8e8e8; /* Bordure légère en bas du Header */
 }
 
-.ant-card {
-  background: #201f1f;
-}
-
+/* Styles du titre dans le Header */
 .ant-typography {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(0, 0, 0, 0.85); /* Texte noir */
+  text-align: center; /* Centrer le texte */
+  flex: 1; /* Permet au titre de s'étendre pour occuper l'espace disponible */
+  margin: 0; /* Enlever les marges par défaut */
+}
+
+
+/* Styles pour les cartes */
+.ant-card {
+  background: #e8e8e8; /* Gris clair pour les cartes */
+  border-radius: 8px; /* Coins arrondis pour un effet moderne */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus marquée pour un effet moderne */
+  border: 1px solid #d0d0d0; /* Bordure légère pour améliorer la définition */
+  transition: all 0.3s ease; /* Transition douce pour les effets de survol */
+}
+
+/* Effet au survol des cartes */
+.ant-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+  border-color: #b0b0b0; /* Bordure légèrement plus foncée au survol */
+}
+
+
+/* Styles pour les éléments de formulaire */
+.ant-form-item-label > label {
+  color: rgba(0, 0, 0, 0.85); /* Couleur du label du formulaire */
+}
+
+.ant-btn-primary {
+  background: #1890ff; /* Couleur du bouton principal */
+  border-color: #1890ff; /* Bordure du bouton principal */
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff; /* Couleur du bouton principal au survol */
+  border-color: #40a9ff; /* Bordure du bouton principal au survol */
+}
+
+.ant-input,
+.ant-picker {
+  border-color: #d9d9d9; /* Bordure des champs de saisie et des sélecteurs */
+}
+
+.ant-input:hover,
+.ant-picker:hover {
+  border-color: #40a9ff; /* Bordure des champs de saisie et des sélecteurs au survol */
+}
+
+.ant-input-focused,
+.ant-picker-focused {
+  border-color: #1890ff; /* Bordure des champs de saisie et des sélecteurs au focus */
+}
+
+.ant-tooltip-inner {
+  background-color: #000; /* Couleur de fond des tooltips */
+  color: #fff; /* Couleur du texte des tooltips */
 }

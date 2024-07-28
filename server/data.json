@@ -1,14 +1,56 @@
 [
   {
-  "date": "2024-07-24",
-  "raydium": { "liquidity": 993.88, "reward": 0, "apr": 6.4 },
-  "meteora": { "liquidity": 1000.8, "reward": 0, "apr": 0.02 },
-    "orca": { "liquidity": 1001.6, "reward": 0, "apr": 0.012 }
+    "date": "2024-07-24",
+    "raydium": {
+      "liquidity": 993.88,
+      "reward": 0,
+      "apr": 6.4
+    },
+    "meteora": {
+      "liquidity": 1000.8,
+      "reward": 0,
+      "apr": 0.02
+    },
+    "orca": {
+      "liquidity": 1001.6,
+      "reward": 0,
+      "apr": 0.012
+    }
   },
   {
-  "date": "2024-07-25",
-  "raydium": { "liquidity": 993.88, "reward": 0.228086, "apr": 4.47 },
-  "meteora": { "liquidity": 1000.58, "reward": 0.14036, "apr": 0.02 },
-    "orca": { "liquidity": 1001.36, "reward": 0.21, "apr": 0.018 }
+    "date": "2024-07-25",
+    "raydium": {
+      "liquidity": 993.88,
+      "reward": 0.228086,
+      "apr": 4.47
+    },
+    "meteora": {
+      "liquidity": 1000.58,
+      "reward": 0.14036,
+      "apr": 0.02
+    },
+    "orca": {
+      "liquidity": 1001.36,
+      "reward": 0.21,
+      "apr": 0.018
+    }
+  },
+  {
+    "date": "2024-07-26",
+    "raydium": {
+      "liquidity": "5555",
+      "reward": "0.2",
+      "apr": "654"
+    },
+    "meteora": {
+      "liquidity": "678",
+      "reward": "67",
+      "apr": "789"
+    },
+    "orca": {
+      "liquidity": "5",
+      "reward": "10",
+      "apr": "10"
+    }
   }
 ]
