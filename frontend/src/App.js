@@ -8,6 +8,8 @@ import RewardChart from './components/RewardChart';
 import EarnChart from './components/EarnChart';
 import AddDataForm from './components/AddDataForm';
 import { apiUrl } from './apiUrl';
+import PercentChart from './components/PercentChart';
+import StatisticsCards from './components/StatisticsCards';
 
 const { Title } = Typography;
 const { Header, Content } = Layout;
@@ -31,13 +33,17 @@ const App = () => {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Header style={{ padding: '0 20px' }}>
-        <Title style={{ color: '#fff' }}>Suivi du test des pools stablecoin</Title>
+     <Header style={{ padding: '0 20px' }}>
+        <Title level={2} style={{ color: 'black', marginBottom: '0.5rem' }}>
+          Suivi du test des pools stablecoin
+        </Title>
       </Header>
       <Content style={{ padding: '20px' }}>
         {isAddPage ? (
           <AddDataForm />
         ) : (
+          <>
+          <StatisticsCards data={data} />
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Title level={2} style={{ textAlign: 'center' }}>Comparaison de la liquidité</Title>
@@ -51,7 +57,12 @@ const App = () => {
               <Title level={2} style={{ textAlign: 'center' }}>Comparaison des gains réalisés</Title>
               <EarnChart data={data} />
             </Col>
+            <Col span={24}>
+              <Title level={2} style={{ textAlign: 'center' }}>Comparaison des pourcentages (daily APR)</Title>
+              <PercentChart data={data} />
+            </Col>
           </Row>
+          </>
         )}
       </Content>
     </Layout>

@@ -2,18 +2,18 @@ import React from 'react';
 import { Card } from 'antd';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const LiquidityChart = ({ data }) => {
+const PercentChart = ({ data }) => {
   const formatDataForChart = () => {
     return data.map(entry => ({
       date: entry.date,
-      orca: entry.orca.liquidity,
-      raydium: entry.raydium.liquidity,
-      meteora: entry.meteora.liquidity
+      orca: entry.orca.apr,
+      raydium: entry.raydium.apr / 365,
+      meteora: entry.meteora.apr
     }));
   };
 
   const formatCurrency = (value) => {
-    return `$${value.toFixed(2)}`;
+    return `${value.toFixed(3)}%`;
   };
 
   return (
@@ -36,4 +36,4 @@ const LiquidityChart = ({ data }) => {
   );
 };
 
-export default LiquidityChart;
+export default PercentChart;

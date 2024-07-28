@@ -39,6 +39,10 @@ const EarnChart = ({ data }) => {
     return gainsData;
   };
 
+  const formatCurrency = (value) => {
+    return `$${value.toFixed(5)}`;
+  };
+
   return (
     <Card>
       <div style={{ width: '100%', height: 400 }}>
@@ -50,7 +54,7 @@ const EarnChart = ({ data }) => {
             <CartesianGrid stroke="#6e6e6e" />
             <XAxis dataKey="date" stroke="#6e6e6e" />
             <YAxis stroke="#6e6e6e" />
-            <Tooltip />
+            <Tooltip formatter={(value) => formatCurrency(value)} />
             <Legend />
           </LineChart>
         </ResponsiveContainer>
