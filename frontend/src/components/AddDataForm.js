@@ -11,23 +11,22 @@ const AddDataForm = () => {
   const onFinish = async (values) => {
     setLoading(true);
     try {
-      // Formate les données pour correspondre à la structure attendue par l'API
       const formattedValues = {
         date: values.date.format('YYYY-MM-DD'),
         raydium: {
-          liquidity: values.raydium_liquidity,
-          reward: values.raydium_reward,
-          apr: values.raydium_apr
+          liquidity: parseFloat(values.raydium_liquidity),
+          reward: parseFloat(values.raydium_reward),
+          apr: parseFloat(values.raydium_apr)
         },
         meteora: {
-          liquidity: values.meteora_liquidity,
-          reward: values.meteora_reward,
-          apr: values.meteora_apr
+          liquidity: parseFloat(values.meteora_liquidity),
+          reward: parseFloat(values.meteora_reward),
+          apr: parseFloat(values.meteora_apr)
         },
         orca: {
-          liquidity: values.orca_liquidity,
-          reward: values.orca_reward,
-          apr: values.orca_apr
+          liquidity: parseFloat(values.orca_liquidity),
+          reward: parseFloat(values.orca_reward),
+          apr: parseFloat(values.orca_apr)
         }
       };
 
